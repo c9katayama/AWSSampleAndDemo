@@ -2,6 +2,9 @@ SWFDemoAppの使い方
 
 このプロジェクトセットは、Eclipseで利用することを前提としています。
 Eclipse3.7およびJDK1.6で稼働確認をしています。
+AmazonSWF自体の説明およびデモの説明については
+http://www.slideshare.net/c95029/introduction-of-amazon-simpleworkflow
+を参照して下さい。
 
 1、JDKの設定
 eclipseから Window > Preferences > Java > Installed JREsを選択。
@@ -41,7 +44,5 @@ swfdemowebapp.DemoServerStart(ローカルでメール受信Webアプリを動�
 はじめにMyActivityWorker、MyDeciderWorker、DemoServerStartを起動し、
 最後にMyWorkflowStarterを実行します。
 
+MyWorkflowStarter起動ごとに、1つのワークフローエグゼキューショんが生成されます。
 
-
-
-次の順番でアプリケーションを起動してください。
