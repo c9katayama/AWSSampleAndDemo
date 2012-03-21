@@ -1,7 +1,9 @@
 SWFDemoAppの使い方
 
+このプロジェクトセットは、Eclipseで利用することを前提としています。
+Eclipse3.7およびJDK1.6で稼働確認をしています。
+
 1、JDKの設定
-AWS SDK for 
 eclipseから Window > Preferences > Java > Installed JREsを選択。
 利用しているJRE/JDKを選んで、Editボタンをクリック。
 Default Java Arguments に
