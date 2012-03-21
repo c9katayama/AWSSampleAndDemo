@@ -1,5 +1,13 @@
 SWFDemoAppの使い方
 
+1、JDKの設定
+AWS SDK for 
+eclipseから Window > Preferences > Java > Installed JREsを選択。
+利用しているJRE/JDKを選んで、Editボタンをクリック。
+Default Java Arguments に
+-javaagent:C:\ファイルパス\lib\aspectjweaver.jar
+を設定（このプロジェクトのlibに入っているaspectjweaver.jarのパスを設定）
+
 1、初期設定
 プロジェクト直下の「SETUP-swf-demo.properties」をコピーし、「swf-demo.properties」とリネームします。
 リネーム後、以下の項目を変更します。
