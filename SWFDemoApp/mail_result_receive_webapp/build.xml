@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<project name="SWFDemoWebApp" default="dist" basedir=".">
+
+  <target name="dist" >
+  	<delete dir="tmp"/>
+  	<mkdir dir="tmp"/>
+  	
+  	<copy todir="tmp">
+  		<fileset dir="WebContent" includes="*/**"/>
+  	</copy>
+  	
+  	<copy todir="tmp/WEB-INF/classes">
+  		<fileset dir="../bin" includes="swfdemowebapp/*"/>
+  	</copy>
+  	<copy todir="tmp/WEB-INF/lib">
+  		<fileset dir="../lib" includes="*"/>
+  	</copy>
+    <jar destfile="SWFDemoWebApp.war"
+         basedir="tmp" />
+  	<!--<delete dir="tmp"/>-->
+
+  </target>
+</project>
