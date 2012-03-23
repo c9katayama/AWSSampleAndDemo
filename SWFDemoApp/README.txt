@@ -44,5 +44,5 @@ swfdemowebapp.DemoServerStart(ローカルでメール受信Webアプリを動�
 はじめにMyActivityWorker、MyDeciderWorker、DemoServerStartを起動し、
 最後にMyWorkflowStarterを実行します。
 
-MyWorkflowStarter起動ごとに、1つのワークフローエグゼキューショんが生成されます。
+MyWorkflowStarter起動ごとに、1つのワークフローエグゼキューションが生成されます。
 
