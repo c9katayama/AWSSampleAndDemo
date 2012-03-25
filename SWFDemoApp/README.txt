@@ -6,12 +6,19 @@ AmazonSWF自体の説明およびデモの説明については
 http://www.slideshare.net/c95029/introduction-of-amazon-simpleworkflow
 を参照して下さい。
 
-1、JDKの設定
+1、JDK/プロジェクトの設定
 eclipseから Window > Preferences > Java > Installed JREsを選択。
 利用しているJRE/JDKを選んで、Editボタンをクリック。
 Default Java Arguments に
 -javaagent:C:\ファイルパス\lib\aspectjweaver.jar
 を設定（このプロジェクトのlibに入っているaspectjweaver.jarのパスを設定）
+
+プロジェクト右クリックから、APTの設定を実施
+Java Compiler > Annotation Processing 
+ Enable project specific settings, Enable annotation processing, Enable processing in editorにチェック
+Java Compiler > Annotation Processing >Factory Path
+ Enable project specific settingsにチェック
+  Add JARs..を選択し、SWFDemoApp/lib下にあるaws-java-sdk-1.3.3.jar, aws-java-sdk-flow-build-tools-1.3.3.jar, freemarker-2.3.10.jarを選択
 
 1、初期設定
 プロジェクト直下の「SETUP-swf-demo.properties」をコピーし、「swf-demo.properties」とリネームします。
