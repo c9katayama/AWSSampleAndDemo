@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<project name="project" default="dist" basedir=".">
+
+  <!-- warファイルの設定 -->
+  <property name="war.home" value="." />
+  <property name="web-app.name" value="SWF_NASA_Demo" />
+
+  <!-- jarタスクによってwarファイルを作成 -->
+  <target name="dist" >
+  	<delete file="${war.home}/${web-app.name}.war"></delete>
+    <jar destfile="${war.home}/${web-app.name}.war"
+         basedir="WebContent" />
+  </target>
+</project>
