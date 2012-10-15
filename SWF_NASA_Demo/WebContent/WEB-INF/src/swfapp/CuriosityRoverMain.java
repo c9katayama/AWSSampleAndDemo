@@ -48,15 +48,13 @@ public class CuriosityRoverMain {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		button.addActionListener(new ActionListener() {
-
+			private AmazonSimpleWorkflow swfClient = AmazonSWFUtils
+					.createSWFClient();
+			private String domain = ConfigHelper.getInstance().getDomain();
+			private DeciderClientExternalFactory factory = new DeciderClientExternalFactoryImpl(
+					swfClient, domain);
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				AmazonSimpleWorkflow swfClient = AmazonSWFUtils
-						.createSWFClient();
-				String domain = ConfigHelper.getInstance().getDomain();
-
-				DeciderClientExternalFactory factory = new DeciderClientExternalFactoryImpl(
-						swfClient, domain);
 				String workflowId = "CURIOSITY-"
 						+ new SimpleDateFormat("yyyy-MM-dd-hh-mm-ss-SSS")
 								.format(new Date());
