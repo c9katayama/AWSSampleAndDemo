@@ -26,10 +26,11 @@ public class DeciderImpl implements Decider {
 		// send image to S3
 		Promise<String> s3ImagePath = jpl.fileTransfer(srcImagePath);
 
-		// fork processing
+		// branch processing
 		Promise<ProcessingResultA> resultA = aws.dataProcessingA(s3ImagePath);
 		Promise<ProcessingResultB> resultB = aws.dataProcessingB(s3ImagePath);
 		Promise<ProcessingResultC> resultC = aws.dataProcessingC(s3ImagePath);
+		
 		Promise<ProcessingResultD> resultD = aws.dataProcessingD(resultC);
 
 		// join result
