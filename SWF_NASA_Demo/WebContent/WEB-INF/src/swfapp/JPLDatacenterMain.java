@@ -1,6 +1,7 @@
 package swfapp;
 
 import java.awt.BorderLayout;
+import java.awt.Dialog;
 import java.awt.Font;
 import java.awt.Point;
 import java.awt.image.BufferedImage;
@@ -73,7 +74,7 @@ public class JPLDatacenterMain {
 		};
 		Log.log("[JPL]Initializing Activity Worker...");
 		startActivityWorker();
-		Log.log("[JPL]Initializing Workflow Worker...");
+		Log.log("[JPL]Initializing Workflow Worker(Decider)...");
 		startWorkflowWorker();
 		Log.log("[JPL]Initialized.");
 
@@ -115,7 +116,8 @@ public class JPLDatacenterMain {
 				int y = indexY * h;
 				BufferedImage partImage = baseImage.getSubimage(x, y, w, h);
 				JLabel resultLabel = new JLabel(new ImageIcon(partImage));
-				JDialog resultDialog = new JDialog(frame,"RESULT:"+workflowId);
+				//JDialog resultDialog = new JDialog(frame,"RESULT:"+workflowId);
+				JFrame resultDialog = new JFrame("RESULT:"+workflowId);
 				resultDialog.setSize(w, h);
 				Point parentLocation = frame.getLocation();
 				int resultX = parentLocation.x + frame.getWidth() / 2 - w / 2;
